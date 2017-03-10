@@ -9,7 +9,7 @@ using namespace std;
 using namespace std::chrono;
 
 int main() {
-    int N = 1e6;
+    int N = 1e5;
     int M = 1e7;
 
     srand(time(NULL));
