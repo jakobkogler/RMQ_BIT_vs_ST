@@ -17,7 +17,9 @@ public:
 
         while (idx > 1) {
             idx >>= 1;
-            data[idx] = std::min(data[idx<<1], data[idx<<1|1]);
+            int new_min = std::min(data[idx<<1], data[idx<<1|1]);
+            if (new_min == data[idx]) break;
+            data[idx] = new_min;
         }
     }
 
