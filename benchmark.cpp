@@ -10,7 +10,7 @@ using namespace std::chrono;
 
 int main() {
     int N = 1e6;
-    int M = 1e6;
+    int M = 1e7;
 
     srand(time(NULL));
 
@@ -31,7 +31,7 @@ int main() {
         vector<pair<int, int>> queries(M);
         for (int i = 0; i < M; i++) {
             int l = rand() % N;
-            int r = rand() % M;
+            int r = rand() % N;
             if (l > r)
                 swap(l, r);
             l++;
@@ -95,7 +95,7 @@ int main() {
         vector<pair<int, int>> queries(M);
         for (int i = 0; i < M; i++) {
             int l = rand() % N;
-            int r = rand() % M;
+            int r = rand() % N;
             if (l > r)
                 swap(l, r);
             l++;
