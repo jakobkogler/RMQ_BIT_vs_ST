@@ -1,12 +1,12 @@
 #include <vector>
 
-class SegmentTree {
+class SegmentTreeBottomUp {
 private:
     std::vector<int> data;
     int n;
 
 public:
-    SegmentTree(int n) {
+    SegmentTreeBottomUp(int n) {
         this->n = n;
         data.assign(2*n, 0);
     }
