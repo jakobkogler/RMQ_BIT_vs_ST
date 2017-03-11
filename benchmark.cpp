@@ -10,6 +10,9 @@ using namespace std;
 using namespace std::chrono;
 
 int main() {
+    cout.precision(6);
+    cout << fixed;
+
     int N = 1e5;
     int M = 1e7;
 
@@ -73,9 +76,9 @@ int main() {
 
         cout << "QUERY BENCHMARK\n";
         cout << "Result identical: " << (b ? "true" : "false") << '\n';
-        cout << "BIT:   " << duration_bit << " microsecond\n";
-        cout << "ST_BU: " << duration_st_bu << " microsecond\n";
-        cout << "ST_TD: " << duration_st_td << " microsecond\n";
+        cout << "BIT:   " << duration_bit / 1e6 << "s\n";
+        cout << "ST_BU: " << duration_st_bu / 1e6 << "s\n";
+        cout << "ST_TD: " << duration_st_td / 1e6 << "s\n";
         cout << '\n';
     }
 
@@ -105,9 +108,9 @@ int main() {
         auto duration_st_td = duration_cast<microseconds>(end_st_td - start_st_td).count();
 
         cout << "UPDATE BENCHMARK\n";
-        cout << "BIT:   " << duration_bit << " microsecond\n";
-        cout << "ST_BU: " << duration_st_bu << " microsecond\n";
-        cout << "ST_TD: " << duration_st_td << " microsecond\n";
+        cout << "BIT:   " << duration_bit / 1e6 << "s\n";
+        cout << "ST_BU: " << duration_st_bu / 1e6 << "s\n";
+        cout << "ST_TD: " << duration_st_td / 1e6 << "s\n";
         cout << '\n';
     }
 
@@ -153,9 +156,9 @@ int main() {
 
         cout << "QUERY BENCHMARK\n";
         cout << "Result identical: " << (b ? "true" : "false") << '\n';
-        cout << "BIT:   " << duration_bit << " microsecond\n";
-        cout << "ST_BU: " << duration_st_bu << " microsecond\n";
-        cout << "ST_TD: " << duration_st_td << " microsecond\n";
+        cout << "BIT:   " << duration_bit / 1e6 << "s\n";
+        cout << "ST_BU: " << duration_st_bu / 1e6 << "s\n";
+        cout << "ST_TD: " << duration_st_td / 1e6 << "s\n";
         cout << '\n';
     }
 }
